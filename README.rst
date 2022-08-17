@@ -253,8 +253,8 @@ LibCST is `MIT licensed <LICENSE>`_, as found in the LICENSE file.
 Privacy Policy and Terms of Use
 ===============================
 
-- `Privacy Policy <https://opensource.facebook.com/legal/privacy>`_
-- `Terms of Use <https://opensource.facebook.com/legal/terms>`_
+- `Privacy Policy <https://opensource.fb.com/legal/privacy>`_
+- `Terms of Use <https://opensource.fb.com/legal/terms>`_
 
 .. fb-docs-end
 

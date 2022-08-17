@@ -195,7 +195,7 @@ assigned or accessed within.
 Qualified Name Metadata
 -----------------------
 Qualified name provides an unambiguous name to locate the definition of variable and it's
-introduced for class and function in `PEP-3155 <https://www.python.org/dev/peps/pep-3155/>`_.
+introduced for class and function in `PEP-3155 <https://peps.python.org/pep-3155/>`_.
 QualifiedNameProvider provides possible :class:`~libcst.metadata.QualifiedName` given a
 :class:`~libcst.CSTNode`.
 

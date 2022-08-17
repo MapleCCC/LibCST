@@ -526,7 +526,7 @@ class Scope(abc.ABC):
                     a = int("1")
                     [i for i in c()]
 
-        We extends `PEP-3155 <https://www.python.org/dev/peps/pep-3155/>`_
+        We extends `PEP-3155 <https://peps.python.org/pep-3155/>`_
         (defines ``__qualname__`` for class and function only; function namespace is followed
         by a ``<locals>``) to provide qualified name for all :class:`~libcst.CSTNode`
         recorded by :class:`~libcst.metadata.Assignment` and :class:`~libcst.metadata.Access`.

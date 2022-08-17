@@ -82,7 +82,7 @@ Abstract Syntax Trees are good for tools like compilers and type checkers where 
 Concrete Syntax Trees (CST)
 ===========================
 
-A popular CST library for Python is `lib2to3 <https://github.com/python/cpython/tree/master/Lib/lib2to3>`_, which powers tools like `2to3 <https://docs.python.org/3/library/2to3.html>`_ and `Black <https://github.com/ambv/black>`_. Let's look at the syntax tree it generates for the same piece of code::
+A popular CST library for Python is `lib2to3 <https://github.com/python/cpython/tree/main/Lib/lib2to3>`_, which powers tools like `2to3 <https://docs.python.org/3/library/2to3.html>`_ and `Black <https://github.com/psf/black>`_. Let's look at the syntax tree it generates for the same piece of code::
 
     fn(1, 2)  # calls fn
 
@@ -185,7 +185,7 @@ However, much of the semantics of the code is now difficult to understand and ex
 - Adding or removing a parameter from ``fn`` requires careful preservation of ``COMMA`` nodes.
 - Whitespace and comment ownership is unclear. Deleting nodes could result in invalid generated code.
 
-Concrete Syntax Trees are good for operations that don't significantly change the tree and tools that do not wish to change the semantics of the code itself, such as `Black <https://github.com/ambv/black>`_.
+Concrete Syntax Trees are good for operations that don't significantly change the tree and tools that do not wish to change the semantics of the code itself, such as `Black <https://github.com/psf/black>`_.
 
 LibCST
 ======
@@ -360,7 +360,7 @@ LibCST preserves whitespace by parsing it using an internal whitespace parser an
 
 However, this does come with some downsides.
 
-- It is more difficult to implement tools that focus almost exclusively on whitespace on top of LibCST instead of lib2to3. For example, `Black <https://github.com/ambv/black>`_ would need to modify whitespace nodes instead of prefix strings, making its implementation much more complex.
+- It is more difficult to implement tools that focus almost exclusively on whitespace on top of LibCST instead of lib2to3. For example, `Black <https://github.com/psf/black>`_ would need to modify whitespace nodes instead of prefix strings, making its implementation much more complex.
 - The equivalent AST for a Python module will usually be simpler. We must preserve whitespace ownership by assigning it to nodes that make the most sense which requires us to introduce nodes such as :class:`~libcst.Comma`.
 - Parsing with LibCST will always be slower than Python's AST due to the extra work needed to assign whitespace correctly.
 

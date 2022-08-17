@@ -21,7 +21,7 @@ from libcst.metadata.scope_provider import (
 class QualifiedNameProvider(BatchableMetadataProvider[Collection[QualifiedName]]):
     """
     Compute possible qualified names of a variable CSTNode
-    (extends `PEP-3155 <https://www.python.org/dev/peps/pep-3155/>`_).
+    (extends `PEP-3155 <https://peps.python.org/pep-3155/>`_).
     It uses the
     :func:`~libcst.metadata.Scope.get_qualified_names_for` underlying to get qualified names.
     Multiple qualified names may be returned, such as when we have conditional imports or an

@@ -884,7 +884,7 @@ class FormattedString(_BasePrefixedString):
         rpar=[],
     )
 
-    .. _PEP 498: https://www.python.org/dev/peps/pep-0498/#specification
+    .. _PEP 498: https://peps.python.org/pep-0498/#specification
     """
 
     #: A formatted string is composed as a series of :class:`FormattedStringText` and
@@ -1637,9 +1637,9 @@ class Annotation(CSTNode):
         def concat(substrings: Sequence[str]) -> str:
             ...
 
-    .. _PEP 3107: https://www.python.org/dev/peps/pep-3107/
-    .. _PEP 526: https://www.python.org/dev/peps/pep-0526/
-    .. _PEP 484: https://www.python.org/dev/peps/pep-0484/
+    .. _PEP 3107: https://peps.python.org/pep-3107/
+    .. _PEP 526: https://peps.python.org/pep-0526/
+    .. _PEP 484: https://peps.python.org/pep-0484/
     """
 
     #: The annotation's value itself. This is the part of the annotation after the
@@ -1706,7 +1706,7 @@ class ParamStar(CSTNode):
 
     This syntax is described in `PEP 3102`_.
 
-    .. _PEP 3102: https://www.python.org/dev/peps/pep-3102/#specification
+    .. _PEP 3102: https://peps.python.org/pep-3102/#specification
     """
 
     # Comma that comes after the star.
@@ -1729,7 +1729,7 @@ class ParamSlash(CSTNode):
 
     This syntax is described in `PEP 570`_.
 
-    .. _PEP 570: https://www.python.org/dev/peps/pep-0570/#specification
+    .. _PEP 570: https://peps.python.org/pep-0570/#specification
     """
 
     #: Optional comma that comes after the slash. This comma doesn't own the whitespace
