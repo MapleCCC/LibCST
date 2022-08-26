@@ -207,7 +207,7 @@ class ExpressionContextProvider(BatchableMetadataProvider[ExpressionContext]):
     <https://docs.python.org/3/library/ast.html>`__ in ast) for the
     following node types:
     :class:`~libcst.Attribute`, :class:`~libcst.Subscript`,
-    :class:`~libcst.StarredElement` , :class:`~libcst.List`,
+    :class:`~libcst.StarredElement`, :class:`~libcst.List`,
     :class:`~libcst.Tuple` and :class:`~libcst.Name`.
     Note that a :class:`~libcst.Name` may not always have context because of the differences between
     ast and LibCST. E.g. :attr:`~libcst.Attribute.attr` is a :class:`~libcst.Name` in LibCST

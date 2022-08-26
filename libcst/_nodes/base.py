@@ -151,7 +151,7 @@ class CSTNode(ABC):
     def validate_types_shallow(self) -> None:
         """
         Compares the type annotations on a node's fields with those field's actual
-        values at runtime. Raises a TypeError is a mismatch is found.
+        values at runtime. Raises a TypeError if a mismatch is found.
 
         Only validates the current node, not any of it's children. For a recursive
         version, see :func:`validate_types_deep`.

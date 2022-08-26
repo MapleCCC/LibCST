@@ -418,7 +418,7 @@ class ConvertTypeComments(VisitorBasedCodemodCommand):
       commandline.
     - This transform requires capabilities from `ast` that are not available
       prior to Python 3.9, so libcst must run on Python 3.9+. The code you are
-      transforming can by Python 3.6+, this limitation applies only to libcst
+      transforming can be Python 3.6+, this limitation applies only to libcst
       itself.
 
     We can handle type comments in the following statement types:

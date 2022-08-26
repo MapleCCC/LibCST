@@ -40,13 +40,13 @@ class CodemodContext:
 
     #: The current module if a codemod is being executed against a file that
     #: lives on disk, and the repository root is correctly configured. This
-    #: Will take the form of a dotted name such as ``foo.bar.baz`` for a file
+    #: will take the form of a dotted name such as ``foo.bar.baz`` for a file
     #: in the repo named ``foo/bar/baz.py``.
     full_module_name: Optional[str] = None
 
     #: The current package if a codemod is being executed against a file that
     #: lives on disk, and the repository root is correctly configured. This
-    #: Will take the form of a dotted name such as ``foo.bar`` for a file
+    #: will take the form of a dotted name such as ``foo.bar`` for a file
     #: in the repo named ``foo/bar/baz.py``
     full_package_name: Optional[str] = None
 

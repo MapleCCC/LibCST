@@ -887,7 +887,7 @@ class AtMostN(Generic[_MatcherT], _BaseWildcardNode):
 
         m.Call(args=[m.AtMostN(n=2, matcher=m.Arg(m.SimpleString())), m.DoNotCare()])
 
-    And finally, this will match all function calls that have at least 2
+    And finally, this will match all function calls that have at most 3
     arguments, the final one being a string::
 
         m.Call(args=[m.AtMostN(n=2), m.Arg(m.SimpleString())])
@@ -1780,7 +1780,7 @@ def extractall(
     or a :class:`OneOf`/:class:`AllOf` special matcher. Unlike :func:`matches`, it can
     also be a :class:`MatchIfTrue` or :func:`DoesNotMatch` matcher, since we are
     traversing the tree looking for matches. It cannot be a :class:`AtLeastN` or
-    :class:`AtMostN` matcher because these types are wildcards which can only be usedi
+    :class:`AtMostN` matcher because these types are wildcards which can only be used
     inside sequences.
     """
     _, extractions = _find_or_extract_all(
@@ -1923,7 +1923,7 @@ def replace(
     :func:`replace` will run :func:`extract` over all matched nodes and call the
     callable with both the node that should be replaced and the dictionary returned
     by :func:`extract`. Under all circumstances a new tree is returned.
-    :func:`extract` should be viewed as a short-cut to writing a transform which
+    :func:`replace` should be viewed as a short-cut to writing a transform which
     also returns a new tree even when no changes are applied.
 
     Note that the tree can also be a :class:`~libcst.RemovalSentinel` or a
@@ -1941,7 +1941,7 @@ def replace(
     or a :class:`OneOf`/:class:`AllOf` special matcher. Unlike :func:`matches`, it can
     also be a :class:`MatchIfTrue` or :func:`DoesNotMatch` matcher, since we are
     traversing the tree looking for matches. It cannot be a :class:`AtLeastN` or
-    :class:`AtMostN` matcher because these types are wildcards which can only be usedi
+    :class:`AtMostN` matcher because these types are wildcards which can only be used
     inside sequences.
     """
     if isinstance(tree, (RemovalSentinel, MaybeSentinel)):

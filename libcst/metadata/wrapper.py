@@ -159,7 +159,7 @@ class MetadataWrapper:
 
         ::
 
-            mw = ModuleWrapper(module)
+            mw = MetadataWrapper(module)
             # Because `mw.module is not module`, you probably want to do visit and do
             # your analysis on `mw.module`, not `module`.
             mw.module.visit(DoSomeAnalysisVisitor)

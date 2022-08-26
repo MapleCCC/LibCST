@@ -139,7 +139,7 @@ class CSTVisitor(CSTTypedVisitorFunctions, MetadataDependent):
     def on_visit_attribute(self, node: "CSTNode", attribute: str) -> None:
         """
         Called before a node's child attribute is visited and after we have called
-        :func:`~libcst.CSTTransformer.on_visit` on the node. A node's child
+        :func:`~libcst.CSTVisitor.on_visit` on the node. A node's child
         attributes are visited in the order that they appear in source that this
         node originates from.
         """
