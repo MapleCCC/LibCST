@@ -143,14 +143,8 @@ class ExpressionContextVisitor(cst.CSTVisitor):
         node.value.visit(
             ExpressionContextVisitor(self.provider, ExpressionContext.LOAD)
         )
-        slice = node.slice
-        if isinstance(slice, Sequence):
-            for sli in slice:
-                sli.visit(
-                    ExpressionContextVisitor(self.provider, ExpressionContext.LOAD)
-                )
-        else:
-            slice.visit(ExpressionContextVisitor(self.provider, ExpressionContext.LOAD))
+        for sli in node.slice:
+            sli.visit(ExpressionContextVisitor(self.provider, ExpressionContext.LOAD))
         return False
 
     def visit_Tuple(self, node: cst.Tuple) -> Optional[bool]:
