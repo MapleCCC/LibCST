@@ -37,7 +37,7 @@ class AutoConfig(Enum):
     A sentinel value used in PartialParserConfig
     """
 
-    token: int = 0
+    token = 0
 
     def __repr__(self) -> str:
         return str(self)
