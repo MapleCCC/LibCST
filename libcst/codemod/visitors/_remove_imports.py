@@ -175,7 +175,7 @@ class RemoveImportsVisitor(ContextAwareTransformer):
     """
 
     CONTEXT_KEY = "RemoveImportsVisitor"
-    METADATA_DEPENDENCIES: Tuple[ProviderT] = (
+    METADATA_DEPENDENCIES: Tuple[ProviderT, ...] = (
         *GatherUnusedImportsVisitor.METADATA_DEPENDENCIES,
     )
 
