@@ -197,7 +197,7 @@ def _parse_version(version: str) -> PythonVersionInfo:
         if major == 2:
             minor = "7"
         elif major == 3:
-            minor = "6"
+            minor = "10"
         else:
             raise NotImplementedError(
                 "Sorry, no support yet for those fancy new/old versions."
